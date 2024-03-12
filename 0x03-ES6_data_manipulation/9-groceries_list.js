@@ -1,11 +1,16 @@
-iconst groceriesList = () => {
-  const map = new Map();
-  map.set('Apples', 10);
-  map.set('Tomatoes', 10);
-  map.set('Pasta', 1);
-  map.set('Rice', 1);
-  map.set('Banana', 5);
-  return map;
-};
+export default function groceriesList() {
+  const arr = [
+    ['Apples', 10],
+    ['Tomatoes', 10],
+    ['Pasta', 1],
+    ['Rice', 1],
+    ['Banana', 5],
+  ];
 
-export default groceriesList;
+  const mp = new Map();
+  // eslint-disable-next-line no-unused-vars
+  for (const el of arr) {
+    mp.set(el[0], el[1]);
+  }
+  return mp;
+}
